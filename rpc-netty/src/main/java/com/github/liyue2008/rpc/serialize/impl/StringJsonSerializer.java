@@ -1,11 +1,9 @@
 package com.github.liyue2008.rpc.serialize.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.util.IOUtils;
+import com.alibaba.fastjson.JSONObject;
 import com.github.liyue2008.rpc.serialize.AbstractJsonSerializer;
 
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 
 /**
  * @author gaoWL
@@ -20,7 +18,7 @@ public class StringJsonSerializer extends AbstractJsonSerializer<String> {
         int sizeOfJson = buffer.getInt();
         byte[] jsonBytes = new byte[sizeOfJson];
         buffer.get(jsonBytes);
-        return new String(jsonBytes, StandardCharsets.UTF_8);
+        return JSONObject.parseObject(jsonBytes, String.class);
     }
 
     @Override

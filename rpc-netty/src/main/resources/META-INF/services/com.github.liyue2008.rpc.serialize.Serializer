@@ -1,6 +1,6 @@
-#com.github.liyue2008.rpc.serialize.impl.MetadataSerializer
-#com.github.liyue2008.rpc.serialize.impl.StringSerializer
-#com.github.liyue2008.rpc.serialize.impl.RpcRequestSerializer
-com.github.liyue2008.rpc.serialize.impl.MetadataJsonSerializer
-com.github.liyue2008.rpc.serialize.impl.StringJsonSerializer
-com.github.liyue2008.rpc.serialize.impl.RpcRequestJsonSerializer
+com.github.liyue2008.rpc.serialize.impl.MetadataSerializer
+com.github.liyue2008.rpc.serialize.impl.StringSerializer
+com.github.liyue2008.rpc.serialize.impl.RpcRequestSerializer
+#com.github.liyue2008.rpc.serialize.impl.MetadataJsonSerializer
+#com.github.liyue2008.rpc.serialize.impl.StringJsonSerializer
+#com.github.liyue2008.rpc.serialize.impl.RpcRequestJsonSerializer
