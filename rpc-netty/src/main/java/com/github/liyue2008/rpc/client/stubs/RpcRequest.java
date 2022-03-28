@@ -13,6 +13,9 @@
  */
 package com.github.liyue2008.rpc.client.stubs;
 
+import com.alibaba.fastjson.annotation.JSONCreator;
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * @author LiYue
  * Date: 2019/9/27
@@ -22,7 +25,10 @@ public class RpcRequest {
     private final String methodName;
     private final byte [] serializedArguments;
 
-    public RpcRequest(String interfaceName, String methodName, byte[] serializedArguments) {
+    @JSONCreator
+    public RpcRequest(@JSONField(name = "interfaceName") String interfaceName,
+                      @JSONField(name = "methodName") String methodName,
+                      @JSONField(name = "serializedArguments") byte[] serializedArguments) {
         this.interfaceName = interfaceName;
         this.methodName = methodName;
         this.serializedArguments = serializedArguments;
